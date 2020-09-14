@@ -1,0 +1,83 @@
+{
+ // Use IntelliSense to learn about possible attributes.
+ // Hover to view descriptions of existing attributes.
+ // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+ "version": "0.2.0",
+ "configurations": [
+  {
+   "type": "lldb",
+   "request": "launch",
+   "name": "Debug unit tests in library 'civil-engineering-location'",
+   "cargo": {
+    "args": [
+     "test",
+     "--no-run",
+     "--lib",
+     "--package=civil-engineering-location"
+    ],
+    "filter": {
+     "name": "civil-engineering-location",
+     "kind": "lib"
+    }
+   },
+   "args": [],
+   "cwd": "${workspaceFolder}"
+  },
+  {
+   "type": "lldb",
+   "request": "launch",
+   "name": "Debug example 'angle-with-str'",
+   "cargo": {
+    "args": [
+     "build",
+     "--example=angle-with-str",
+     "--package=civil-engineering-location"
+    ],
+    "filter": {
+     "name": "angle-with-str",
+     "kind": "example"
+    }
+   },
+   "args": [],
+   "cwd": "${workspaceFolder}"
+  },
+  {
+   "type": "lldb",
+   "request": "launch",
+   "name": "Debug unit tests in example 'angle-with-str'",
+   "cargo": {
+    "args": [
+     "test",
+     "--no-run",
+     "--example=angle-with-str",
+     "--package=civil-engineering-location"
+    ],
+    "filter": {
+     "name": "angle-with-str",
+     "kind": "example"
+    }
+   },
+   "args": [],
+   "cwd": "${workspaceFolder}"
+  },
+  {
+   "type": "lldb",
+   "request": "launch",
+   "name": "Debug integration test 'test'",
+   "cargo": {
+    "args": [
+     "test",
+     "--no-run",
+     "--test=test",
+     "--package=civil-engineering-location"
+    ],
+    "filter": {
+     "name": "test",
+     "kind": "test"
+    }
+   },
+   "args": [],
+   "cwd": "${workspaceFolder}"
+  }
+ ]
+}
