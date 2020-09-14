@@ -22,6 +22,10 @@ LonLat and LonLatAlt geo-location types and utils.
 
 Note: To enable `"ja-JP"` features if you need additional Japanese features.
 
+## Example and Tests
+
+- To see: [tests/](tests/) and [examples/](examples/).
+
 ## License
 
 - [MIT](LICENSE.md)
