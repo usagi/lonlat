@@ -62,7 +62,6 @@ impl std::convert::TryFrom<&str> for LonLat
   let mut lon: Option<Angle> = None;
   for (index, source_part) in separated.into_iter().enumerate()
   {
-   eprintln!("index={} source_part={:?}", index, source_part);
    let (angle, direction) = Angle::from_dms_str_with_direction(source_part)?;
    match (index, direction)
    {
