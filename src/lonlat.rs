@@ -16,6 +16,7 @@ pub trait LonLatSettable: Default
  fn set_lat(&mut self, lat: Angle);
 }
 
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub struct LonLat
 {
@@ -23,6 +24,7 @@ pub struct LonLat
  pub lat: Angle
 }
 
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 #[derive(Debug, Copy, Clone, PartialEq)]
 pub struct LonLatAlt
 {
